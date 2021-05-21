@@ -7,9 +7,9 @@ import java.util.Set;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import fr.tlobgeois.config.JunitTestConfig;
+import fr.tlobgeois.config.UnitTestConfig;
 
-class PlayerTest extends JunitTestConfig {
+class PlayerTest extends UnitTestConfig {
 
     private static Player playerUnderTest;
 

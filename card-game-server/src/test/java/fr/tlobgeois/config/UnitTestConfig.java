@@ -15,7 +15,7 @@ import fr.tlobgeois.domain.entities.Value;
 
 @SpringBootTest
 @ExtendWith(SpringExtension.class)
-public class JunitTestConfig {
+public class UnitTestConfig {
 
     protected static Set<Card> mockSetOfCards = Stream.of(
             new Card(Suit.CLUB, Value.DEUCE), new Card(Suit.DIAMOND, Value.TEN),

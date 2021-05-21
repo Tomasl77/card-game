@@ -7,9 +7,9 @@ import java.util.LinkedHashSet;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import fr.tlobgeois.config.JunitTestConfig;
+import fr.tlobgeois.config.UnitTestConfig;
 
-class StartingHandDtoTest extends JunitTestConfig {
+class StartingHandDtoTest extends UnitTestConfig {
 
     private static StartingHandDto dtoUnderTest;
 

@@ -7,9 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import fr.tlobgeois.config.JunitTestConfig;
+import fr.tlobgeois.config.UnitTestConfig;
 
-class PlayerDtoTest extends JunitTestConfig {
+class PlayerDtoTest extends UnitTestConfig {
 
     private static PlayerDto playerDtoUnderTest;
 

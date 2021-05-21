@@ -5,9 +5,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import fr.tlobgeois.config.JunitTestConfig;
+import fr.tlobgeois.config.UnitTestConfig;
 
-class ValueTest extends JunitTestConfig {
+class ValueTest extends UnitTestConfig {
 
     private static Value valueUnderTest;
 

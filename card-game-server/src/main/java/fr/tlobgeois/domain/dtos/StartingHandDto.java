@@ -1,9 +1,13 @@
 package fr.tlobgeois.domain.dtos;
 
+import javax.validation.Valid;
+
 public class StartingHandDto {
 
+    @Valid
     private final PlayerDto player;
 
+    @Valid
     private final DeckDto deck;
 
     public StartingHandDto(PlayerDto player, DeckDto deck) {

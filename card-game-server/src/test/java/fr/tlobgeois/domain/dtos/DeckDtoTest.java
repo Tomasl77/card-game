@@ -6,9 +6,9 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import fr.tlobgeois.config.JunitTestConfig;
+import fr.tlobgeois.config.UnitTestConfig;
 
-class DeckDtoTest extends JunitTestConfig {
+class DeckDtoTest extends UnitTestConfig {
 
     private static DeckDto deckUnderTest;
 

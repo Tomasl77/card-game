@@ -2,6 +2,8 @@ package fr.tlobgeois.api.controllers;
 
 import java.util.Set;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,12 +25,12 @@ public class PlayerController {
     }
 
     @PostMapping
-    public Set<Card> getStartingHand(@RequestBody StartingHandDto dto) {
+    public Set<Card> getStartingHand(@Valid @RequestBody StartingHandDto dto) {
 	return this.playerService.getStartingHand(dto);
     }
 
     @PostMapping("/sort")
-    public Set<Card> sortCard(@RequestBody SortCardDto player) {
+    public Set<Card> sortCard(@Valid @RequestBody SortCardDto player) {
 	return this.playerService.sortCard(player);
     }
 }
