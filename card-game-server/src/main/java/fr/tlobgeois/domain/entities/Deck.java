@@ -19,6 +19,10 @@ import fr.tlobgeois.commons.exceptions.NoCardInDeckException;
  */
 public class Deck {
 
+    private static final Value[] VALUES = Value.values();
+
+    private static final Suit[] SUITS = Suit.values();
+
     private Set<Card> cards;
 
     public Deck() {
@@ -57,8 +61,8 @@ public class Deck {
      */
     private Set<Card> buildNewDeck() {
 	Set<Card> decks = new HashSet<>();
-	for (Suit suit : Suit.values()) {
-	    for (Value value : Value.values()) {
+	for (Suit suit : SUITS) {
+	    for (Value value : VALUES) {
 		decks.add(new Card(suit, value));
 	    }
 	}
