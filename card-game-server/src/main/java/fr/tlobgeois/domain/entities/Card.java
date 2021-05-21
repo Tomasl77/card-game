@@ -23,6 +23,14 @@ public class Card implements Comparable<Card> {
 	this.value = value;
     }
 
+    public Suit getSuit() {
+	return suit;
+    }
+
+    public Value getValue() {
+	return value;
+    }
+
     @Override
     public String toString() {
 	return value + " of " + suit;

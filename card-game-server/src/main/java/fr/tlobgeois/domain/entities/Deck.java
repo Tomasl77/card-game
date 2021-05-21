@@ -30,12 +30,24 @@ public class Deck {
     }
 
     public Card drawCard() {
-	Card cardDrawn = cards.stream()
-	        .skip(new Random().nextInt(cards.size())).findFirst()
-	        .orElseThrow(
-	                () -> new NoCardInDeckException("No card in deck"));
+	Card cardDrawn = cards.stream().skip(pickRandomCard()).findFirst()
+	        .get();
 	cards.remove(cardDrawn);
 	return cardDrawn;
+    }
+
+    /**
+     * Choose a random card into the deck depending on it's size.
+     *
+     * @throws {@code NoCardInDeckException} if deck size <= 0.
+     * @return a {@code int} representing the card's position into deck.
+     */
+    private int pickRandomCard() {
+	try {
+	    return new Random().nextInt(cards.size());
+	} catch (IllegalArgumentException exception) {
+	    throw new NoCardInDeckException();
+	}
     }
 
     /**
