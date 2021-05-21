@@ -24,7 +24,7 @@ public class Player {
 	// Protected constructor to ensure non-instantiability
     }
 
-    protected Player(String name, Set<Card> cards) {
+    public Player(String name, Set<Card> cards) {
 	this.name = name;
 	this.cards = cards;
     }

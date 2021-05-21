@@ -9,6 +9,7 @@ import fr.tlobgeois.api.services.PlayerService;
 import fr.tlobgeois.domain.dtos.SortCardDto;
 import fr.tlobgeois.domain.dtos.StartingHandDto;
 import fr.tlobgeois.domain.entities.Card;
+import fr.tlobgeois.domain.entities.Deck;
 import fr.tlobgeois.domain.entities.Player;
 
 @Service
@@ -17,7 +18,9 @@ public class PlayerServiceImpl extends AbstractService
 
     @Override
     public Set<Card> getStartingHand(StartingHandDto dto) {
-	return dto.getCardFromDeck();
+	Player player = dtoConvert(dto.getPlayer(), Player.class);
+	Deck deck = dtoConvert(dto.getDeck(), Deck.class);
+	return player.drawStartingHand(deck);
     }
 
     @Override

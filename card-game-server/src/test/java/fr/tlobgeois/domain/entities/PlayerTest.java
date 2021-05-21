@@ -15,7 +15,7 @@ class PlayerTest extends JunitTestConfig {
 
     @BeforeAll
     static void setUp() throws Exception {
-	playerUnderTest = new Player("Tomas", mockHandOfPlayer);
+	playerUnderTest = new Player("Tomas", mockSetOfCards);
     }
 
     @Test

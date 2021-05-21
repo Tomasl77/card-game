@@ -32,4 +32,9 @@ class DeckTest extends JunitTestConfig {
     void sould_draw_cards() {
 	assertTrue(deckUnderTest.drawCard() instanceof Card);
     }
+
+    @Test
+    void should_to_string() {
+	assertTrue(deckUnderTest.toString().startsWith("{deck: "));
+    }
 }

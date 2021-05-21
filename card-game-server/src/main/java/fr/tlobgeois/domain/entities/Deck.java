@@ -67,6 +67,6 @@ public class Deck {
 
     @Override
     public String toString() {
-	return "Deck : {" + cards + "}";
+	return "{deck: " + cards + "}";
     }
 }
